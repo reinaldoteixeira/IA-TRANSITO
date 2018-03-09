@@ -63,9 +63,39 @@ namespace testes.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap interior_color_1 {
+        internal static System.Drawing.Bitmap amarelo {
             get {
-                object obj = ResourceManager.GetObject("interior_color_1", resourceCulture);
+                object obj = ResourceManager.GetObject("amarelo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap azul {
+            get {
+                object obj = ResourceManager.GetObject("azul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rua_Projeto_IA {
+            get {
+                object obj = ResourceManager.GetObject("Rua_Projeto_IA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vermelho {
+            get {
+                object obj = ResourceManager.GetObject("vermelho", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

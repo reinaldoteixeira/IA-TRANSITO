@@ -1,0 +1,14 @@
+LEFT >>>> 814; 150
+20 pixels
+
+
+RIGHT>>>> -80; 240
+20 pixels
+
+
+TOP>>>> 422; -80
+20 pixels
+
+
+BUTTON>>>> 309; 488
+20 pixels
