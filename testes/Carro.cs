@@ -14,19 +14,17 @@ namespace testes
         private AnchorStyles sentido;
 
         
-        //private Timer timer;
+        
         
 
 
-        public Carro(Form form,int x,int y, AnchorStyles sentido)
+        public Carro(Form form,Posicao posicao)
         {
-            //timer = new Timer();
-            //timer.Interval =30;
-            //timer.Tick += new EventHandler(tick); //uma ação a cada tempo
+            
             
             car = new PictureBox();
-            car.Location = new System.Drawing.Point(x, y);
-            car.Size = new System.Drawing.Size(80, 80);
+            car.Location = new System.Drawing.Point(posicao.x, posicao.y);
+            car.Size = new System.Drawing.Size(50,50);
 
             Random r = new Random();
             int cor = r.Next(1, 4);
@@ -48,10 +46,10 @@ namespace testes
             
             car.SizeMode = PictureBoxSizeMode.Zoom;
             form.Controls.Add(car);
-            definir_sentido(sentido);
+            definir_sentido(posicao.sentido);
 
 
-            //timer.Start();
+            
         }
         public void andar()
         {
@@ -71,8 +69,6 @@ namespace testes
         }
         public void definir_sentido(AnchorStyles sentido)
         {
-            //Começa sempre no sentido Left
-            //Rotate sempre vira sentido horario ->
             
             this.sentido = sentido;
 
@@ -160,6 +156,14 @@ namespace testes
             }
 
             car.Image = temp;
+        }
+        public int getX()
+        {
+            return car.Location.X;
+        }
+        public int getY()
+        {
+                return car.Location.Y;
         }
     }
 }
