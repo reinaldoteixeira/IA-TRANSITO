@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.barCima = new System.Windows.Forms.ProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.barDireita = new System.Windows.Forms.ProgressBar();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.barBaixo = new System.Windows.Forms.ProgressBar();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.barEsquerda = new System.Windows.Forms.ProgressBar();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -48,57 +52,95 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.semEsquerda = new System.Windows.Forms.PictureBox();
+            this.semDireita = new System.Windows.Forms.PictureBox();
+            this.semBaixo = new System.Windows.Forms.PictureBox();
+            this.semCima = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.semEsquerda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semDireita)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semBaixo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semCima)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.ForestGreen;
-            this.panel1.Controls.Add(this.progressBar3);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Controls.Add(this.semCima);
+            this.panel1.Controls.Add(this.barCima);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(301, 160);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // barCima
+            // 
+            this.barCima.Location = new System.Drawing.Point(143, 127);
+            this.barCima.Name = "barCima";
+            this.barCima.Size = new System.Drawing.Size(147, 23);
+            this.barCima.TabIndex = 24;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.ForestGreen;
-            this.panel2.Controls.Add(this.progressBar4);
+            this.panel2.Controls.Add(this.semDireita);
+            this.panel2.Controls.Add(this.barDireita);
             this.panel2.Location = new System.Drawing.Point(502, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(315, 160);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // barDireita
+            // 
+            this.barDireita.Location = new System.Drawing.Point(19, 127);
+            this.barDireita.Name = "barDireita";
+            this.barDireita.Size = new System.Drawing.Size(147, 23);
+            this.barDireita.TabIndex = 25;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.ForestGreen;
-            this.panel3.Controls.Add(this.progressBar1);
+            this.panel3.Controls.Add(this.semBaixo);
+            this.panel3.Controls.Add(this.barBaixo);
             this.panel3.Location = new System.Drawing.Point(506, 315);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(311, 197);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // barBaixo
+            // 
+            this.barBaixo.Location = new System.Drawing.Point(15, 101);
+            this.barBaixo.Name = "barBaixo";
+            this.barBaixo.Size = new System.Drawing.Size(147, 23);
+            this.barBaixo.TabIndex = 22;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.ForestGreen;
-            this.panel4.Controls.Add(this.progressBar2);
+            this.panel4.Controls.Add(this.semEsquerda);
+            this.panel4.Controls.Add(this.barEsquerda);
             this.panel4.Location = new System.Drawing.Point(0, 315);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(301, 197);
             this.panel4.TabIndex = 3;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // barEsquerda
+            // 
+            this.barEsquerda.Location = new System.Drawing.Point(144, 101);
+            this.barEsquerda.Maximum = 10;
+            this.barEsquerda.Name = "barEsquerda";
+            this.barEsquerda.Size = new System.Drawing.Size(147, 23);
+            this.barEsquerda.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.barEsquerda.TabIndex = 23;
+            this.barEsquerda.Click += new System.EventHandler(this.progressBar2_Click);
             // 
             // panel5
             // 
@@ -228,37 +270,6 @@
             this.panel20.Size = new System.Drawing.Size(13, 33);
             this.panel20.TabIndex = 20;
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(15, 10);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(147, 23);
-            this.progressBar1.TabIndex = 22;
-            // 
-            // progressBar2
-            // 
-            this.progressBar2.Location = new System.Drawing.Point(144, 10);
-            this.progressBar2.Maximum = 10;
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(147, 23);
-            this.progressBar2.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar2.TabIndex = 23;
-            this.progressBar2.Click += new System.EventHandler(this.progressBar2_Click);
-            // 
-            // progressBar3
-            // 
-            this.progressBar3.Location = new System.Drawing.Point(143, 127);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(147, 23);
-            this.progressBar3.TabIndex = 24;
-            // 
-            // progressBar4
-            // 
-            this.progressBar4.Location = new System.Drawing.Point(19, 127);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(147, 23);
-            this.progressBar4.TabIndex = 25;
-            // 
             // panel21
             // 
             this.panel21.BackColor = System.Drawing.Color.Yellow;
@@ -267,14 +278,49 @@
             this.panel21.Size = new System.Drawing.Size(34, 12);
             this.panel21.TabIndex = 8;
             // 
-            // button1
+            // semEsquerda
             // 
-            this.button1.Location = new System.Drawing.Point(387, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 21);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.semEsquerda.BackColor = System.Drawing.Color.Silver;
+            this.semEsquerda.Image = global::testes.Properties.Resources.sinal_vermelho;
+            this.semEsquerda.Location = new System.Drawing.Point(211, 13);
+            this.semEsquerda.Name = "semEsquerda";
+            this.semEsquerda.Size = new System.Drawing.Size(80, 80);
+            this.semEsquerda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.semEsquerda.TabIndex = 24;
+            this.semEsquerda.TabStop = false;
+            // 
+            // semDireita
+            // 
+            this.semDireita.BackColor = System.Drawing.Color.Silver;
+            this.semDireita.Image = global::testes.Properties.Resources.sinal_vermelho;
+            this.semDireita.Location = new System.Drawing.Point(19, 41);
+            this.semDireita.Name = "semDireita";
+            this.semDireita.Size = new System.Drawing.Size(80, 80);
+            this.semDireita.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.semDireita.TabIndex = 26;
+            this.semDireita.TabStop = false;
+            // 
+            // semBaixo
+            // 
+            this.semBaixo.BackColor = System.Drawing.Color.Silver;
+            this.semBaixo.Image = global::testes.Properties.Resources.sinal_vermelho;
+            this.semBaixo.Location = new System.Drawing.Point(15, 13);
+            this.semBaixo.Name = "semBaixo";
+            this.semBaixo.Size = new System.Drawing.Size(80, 80);
+            this.semBaixo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.semBaixo.TabIndex = 27;
+            this.semBaixo.TabStop = false;
+            // 
+            // semCima
+            // 
+            this.semCima.BackColor = System.Drawing.Color.Silver;
+            this.semCima.Image = global::testes.Properties.Resources.sinal_vermelho;
+            this.semCima.Location = new System.Drawing.Point(210, 41);
+            this.semCima.Name = "semCima";
+            this.semCima.Size = new System.Drawing.Size(80, 80);
+            this.semCima.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.semCima.TabIndex = 27;
+            this.semCima.TabStop = false;
             // 
             // Form1
             // 
@@ -284,7 +330,6 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(815, 507);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel21);
             this.Controls.Add(this.panel20);
             this.Controls.Add(this.panel19);
@@ -314,6 +359,10 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.semEsquerda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semDireita)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semBaixo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semCima)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -339,12 +388,15 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.ProgressBar progressBar3;
-        private System.Windows.Forms.ProgressBar progressBar4;
+        private System.Windows.Forms.ProgressBar barBaixo;
+        private System.Windows.Forms.ProgressBar barEsquerda;
+        private System.Windows.Forms.ProgressBar barCima;
+        private System.Windows.Forms.ProgressBar barDireita;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox semDireita;
+        private System.Windows.Forms.PictureBox semBaixo;
+        private System.Windows.Forms.PictureBox semEsquerda;
+        private System.Windows.Forms.PictureBox semCima;
     }
 }
 

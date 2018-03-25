@@ -52,7 +52,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="gerenciador.cs" />
+    <Compile Include="Gerenciador.cs" />
+    <Compile Include="Semafaro.cs" />
+    <Compile Include="Transito.cs" />
     <Compile Include="Posicao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +98,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinal_amarelo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinal_verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinal_vermelho.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

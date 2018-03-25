@@ -19,4 +19,10 @@ namespace testes
             Application.Run(new Form1());
         }
     }
+    public enum cor
+    {
+        Verde,
+        Amarelo,
+        Vermelho
+    }
 }
