@@ -12,6 +12,7 @@ namespace testes
         private Timer tempo;
         public List<Semafaro> semafaros = new List<Semafaro>();
         private List<Carro> carros;
+
         public Gerenciador(List<Carro> carros)
         {
             this.carros = carros;
@@ -51,13 +52,16 @@ namespace testes
                 semafaros[2].vermelho();
                 semafaros[3].vermelho();
             }
+            
         }
+
         public void iniciar()
         {
             semafaros[0].verde();
             semafaros[1].verde();
             tempo.Start();
         }
+
         public void addSemafaro(PictureBox semafaro, ProgressBar barra, System.Drawing.Point p1, System.Drawing.Point p2, System.Drawing.Point faixa1, System.Drawing.Point faixa2)
         {
             semafaros.Add(new Semafaro(semafaro, barra, p1, p2,faixa1,faixa2,carros));

@@ -30,6 +30,7 @@ namespace testes
             cont = 40;
          
         }
+
         public void iniciar()
         {
             tempo.Start();
@@ -47,6 +48,11 @@ namespace testes
 
             if (cont == 0)
             {
+                for(int i=0; i< gerenciador.semafaros.Count; i++)
+                {
+                    gerenciador.semafaros[i].contarCarros();
+                }
+                
                 addCarro();
                 cont = 25;//25
                 for (int i = 0; i < carros.Count; i++)
@@ -58,6 +64,10 @@ namespace testes
                     }
                         
                 }
+                for (int i = 0; i < gerenciador.semafaros.Count; i++)
+                {
+                    gerenciador.semafaros[i].contarCarros();
+                }
             }
             else
             {
@@ -67,6 +77,7 @@ namespace testes
            
 
         }
+
         private void addCarro()
         {
 

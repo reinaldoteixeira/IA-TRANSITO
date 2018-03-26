@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.semCima = new System.Windows.Forms.PictureBox();
             this.barCima = new System.Windows.Forms.ProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.semDireita = new System.Windows.Forms.PictureBox();
             this.barDireita = new System.Windows.Forms.ProgressBar();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.semBaixo = new System.Windows.Forms.PictureBox();
             this.barBaixo = new System.Windows.Forms.ProgressBar();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.semEsquerda = new System.Windows.Forms.PictureBox();
             this.barEsquerda = new System.Windows.Forms.ProgressBar();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -53,18 +57,14 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.semEsquerda = new System.Windows.Forms.PictureBox();
-            this.semDireita = new System.Windows.Forms.PictureBox();
-            this.semBaixo = new System.Windows.Forms.PictureBox();
-            this.semCima = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.semCima)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.semDireita)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.semBaixo)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.semEsquerda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semDireita)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semBaixo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semCima)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,11 +76,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(301, 160);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // semCima
+            // 
+            this.semCima.BackColor = System.Drawing.Color.Silver;
+            this.semCima.Image = global::testes.Properties.Resources.sinal_vermelho;
+            this.semCima.Location = new System.Drawing.Point(210, 41);
+            this.semCima.Name = "semCima";
+            this.semCima.Size = new System.Drawing.Size(80, 80);
+            this.semCima.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.semCima.TabIndex = 27;
+            this.semCima.TabStop = false;
             // 
             // barCima
             // 
             this.barCima.Location = new System.Drawing.Point(143, 127);
+            this.barCima.Maximum = 8;
             this.barCima.Name = "barCima";
             this.barCima.Size = new System.Drawing.Size(147, 23);
             this.barCima.TabIndex = 24;
@@ -94,11 +105,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(315, 160);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // semDireita
+            // 
+            this.semDireita.BackColor = System.Drawing.Color.Silver;
+            this.semDireita.Image = global::testes.Properties.Resources.sinal_vermelho;
+            this.semDireita.Location = new System.Drawing.Point(19, 41);
+            this.semDireita.Name = "semDireita";
+            this.semDireita.Size = new System.Drawing.Size(80, 80);
+            this.semDireita.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.semDireita.TabIndex = 26;
+            this.semDireita.TabStop = false;
             // 
             // barDireita
             // 
             this.barDireita.Location = new System.Drawing.Point(19, 127);
+            this.barDireita.Maximum = 8;
             this.barDireita.Name = "barDireita";
             this.barDireita.Size = new System.Drawing.Size(147, 23);
             this.barDireita.TabIndex = 25;
@@ -112,11 +134,22 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(311, 197);
             this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // semBaixo
+            // 
+            this.semBaixo.BackColor = System.Drawing.Color.Silver;
+            this.semBaixo.Image = global::testes.Properties.Resources.sinal_vermelho;
+            this.semBaixo.Location = new System.Drawing.Point(15, 13);
+            this.semBaixo.Name = "semBaixo";
+            this.semBaixo.Size = new System.Drawing.Size(80, 80);
+            this.semBaixo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.semBaixo.TabIndex = 27;
+            this.semBaixo.TabStop = false;
             // 
             // barBaixo
             // 
             this.barBaixo.Location = new System.Drawing.Point(15, 101);
+            this.barBaixo.Maximum = 8;
             this.barBaixo.Name = "barBaixo";
             this.barBaixo.Size = new System.Drawing.Size(147, 23);
             this.barBaixo.TabIndex = 22;
@@ -130,17 +163,26 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(301, 197);
             this.panel4.TabIndex = 3;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // semEsquerda
+            // 
+            this.semEsquerda.BackColor = System.Drawing.Color.Silver;
+            this.semEsquerda.Image = global::testes.Properties.Resources.sinal_vermelho;
+            this.semEsquerda.Location = new System.Drawing.Point(211, 13);
+            this.semEsquerda.Name = "semEsquerda";
+            this.semEsquerda.Size = new System.Drawing.Size(80, 80);
+            this.semEsquerda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.semEsquerda.TabIndex = 24;
+            this.semEsquerda.TabStop = false;
             // 
             // barEsquerda
             // 
             this.barEsquerda.Location = new System.Drawing.Point(144, 101);
-            this.barEsquerda.Maximum = 10;
+            this.barEsquerda.Maximum = 8;
             this.barEsquerda.Name = "barEsquerda";
             this.barEsquerda.Size = new System.Drawing.Size(147, 23);
             this.barEsquerda.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.barEsquerda.TabIndex = 23;
-            this.barEsquerda.Click += new System.EventHandler(this.progressBar2_Click);
             // 
             // panel5
             // 
@@ -278,50 +320,6 @@
             this.panel21.Size = new System.Drawing.Size(34, 12);
             this.panel21.TabIndex = 8;
             // 
-            // semEsquerda
-            // 
-            this.semEsquerda.BackColor = System.Drawing.Color.Silver;
-            this.semEsquerda.Image = global::testes.Properties.Resources.sinal_vermelho;
-            this.semEsquerda.Location = new System.Drawing.Point(211, 13);
-            this.semEsquerda.Name = "semEsquerda";
-            this.semEsquerda.Size = new System.Drawing.Size(80, 80);
-            this.semEsquerda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.semEsquerda.TabIndex = 24;
-            this.semEsquerda.TabStop = false;
-            // 
-            // semDireita
-            // 
-            this.semDireita.BackColor = System.Drawing.Color.Silver;
-            this.semDireita.Image = global::testes.Properties.Resources.sinal_vermelho;
-            this.semDireita.Location = new System.Drawing.Point(19, 41);
-            this.semDireita.Name = "semDireita";
-            this.semDireita.Size = new System.Drawing.Size(80, 80);
-            this.semDireita.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.semDireita.TabIndex = 26;
-            this.semDireita.TabStop = false;
-            // 
-            // semBaixo
-            // 
-            this.semBaixo.BackColor = System.Drawing.Color.Silver;
-            this.semBaixo.Image = global::testes.Properties.Resources.sinal_vermelho;
-            this.semBaixo.Location = new System.Drawing.Point(15, 13);
-            this.semBaixo.Name = "semBaixo";
-            this.semBaixo.Size = new System.Drawing.Size(80, 80);
-            this.semBaixo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.semBaixo.TabIndex = 27;
-            this.semBaixo.TabStop = false;
-            // 
-            // semCima
-            // 
-            this.semCima.BackColor = System.Drawing.Color.Silver;
-            this.semCima.Image = global::testes.Properties.Resources.sinal_vermelho;
-            this.semCima.Location = new System.Drawing.Point(210, 41);
-            this.semCima.Name = "semCima";
-            this.semCima.Size = new System.Drawing.Size(80, 80);
-            this.semCima.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.semCima.TabIndex = 27;
-            this.semCima.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,13 +354,13 @@
             this.Text = "Transito";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.semCima)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.semDireita)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.semBaixo)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.semEsquerda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semDireita)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semBaixo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semCima)).EndInit();
             this.ResumeLayout(false);
 
         }

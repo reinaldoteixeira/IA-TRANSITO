@@ -12,11 +12,10 @@ namespace testes
         private PictureBox car;
         private int pixelSeg = 5;
         private int tamanho = 50;
+        private int visao = 10;
         private AnchorStyles sentido;
         private  Transito t;
         
-
-
 
         public Carro(Transito transito, Posicao posicao)
         {
@@ -51,14 +50,17 @@ namespace testes
 
             
         }
+
         public void andar()
         {
             if (carroNaFrente() == true)
                 return;
-            if (semafaroVermelho() == true)
-                return;
 
-            if(sentido == AnchorStyles.Right)
+            if (semafaroVermelho() == true)  
+                return;
+            
+
+            if (sentido == AnchorStyles.Right)
                 car.Location = new System.Drawing.Point(car.Location.X + pixelSeg, car.Location.Y);
             else if(sentido == AnchorStyles.Left)
                 car.Location = new System.Drawing.Point(car.Location.X - pixelSeg, car.Location.Y);
@@ -66,8 +68,9 @@ namespace testes
                 car.Location = new System.Drawing.Point(car.Location.X, car.Location.Y - pixelSeg);
             else
                 car.Location = new System.Drawing.Point(car.Location.X, car.Location.Y + pixelSeg);
-        }
 
+            
+        }
 
         public void definir_sentido(AnchorStyles sentido)
         {
@@ -165,11 +168,11 @@ namespace testes
             return sentido;
         }
 
-
         public System.Drawing.Point getPointInicio()
         {
             return car.Location;
         }
+
         public System.Drawing.Point getPointFim()
         {
             return new System.Drawing.Point(car.Location.X + tamanho,car.Location.Y + tamanho);
@@ -177,18 +180,17 @@ namespace testes
 
         public System.Drawing.Point getPointVisao()
         {
-            int visao = 25;
+            
             if (sentido == AnchorStyles.Top)
-                return new System.Drawing.Point(car.Location.X + 25, car.Location.Y - visao);
+                return new System.Drawing.Point(car.Location.X + (tamanho/2), car.Location.Y - visao);
             else if (sentido == AnchorStyles.Bottom)
-                return new System.Drawing.Point(car.Location.X + 25, car.Location.Y + 50 + visao);
+                return new System.Drawing.Point(car.Location.X + (tamanho / 2), car.Location.Y +tamanho + visao);
             else if (sentido == AnchorStyles.Right)
-               return new System.Drawing.Point(car.Location.X + 50 + visao, car.Location.Y + 25);
+               return new System.Drawing.Point(car.Location.X + tamanho + visao, car.Location.Y + (tamanho / 2));
             else
-                return new System.Drawing.Point(car.Location.X - visao, car.Location.Y + 25);
+                return new System.Drawing.Point(car.Location.X - visao, car.Location.Y + (tamanho / 2));
         }
-
-        
+      
         private bool carroNaFrente()
         {
             System.Drawing.Point p1, p2, v1;
@@ -204,6 +206,7 @@ namespace testes
             }
             return false;
         }
+
         private bool semafaroVermelho()
         {
             System.Drawing.Point p1, p2, v1;
@@ -229,14 +232,15 @@ namespace testes
         public System.Drawing.Point Traseiro()
         {
             if (sentido == AnchorStyles.Top)
-                return new System.Drawing.Point(car.Location.X + 25, car.Location.Y + 50);
+                return new System.Drawing.Point(car.Location.X + (tamanho / 2), car.Location.Y + tamanho);
             else if (sentido == AnchorStyles.Bottom)
-                return new System.Drawing.Point(car.Location.X + 25, car.Location.Y);
+                return new System.Drawing.Point(car.Location.X + (tamanho / 2), car.Location.Y);
             else if (sentido == AnchorStyles.Right)
-                return new System.Drawing.Point(car.Location.X, car.Location.Y + 25);
+                return new System.Drawing.Point(car.Location.X, car.Location.Y + (tamanho / 2));
             else
-                return new System.Drawing.Point(car.Location.X + 50, car.Location.Y + 25);
+                return new System.Drawing.Point(car.Location.X + tamanho, car.Location.Y + (tamanho / 2));
         }
+
         public void destruir()
         {
             t.form.Controls.Remove(car);

@@ -30,20 +30,41 @@ namespace testes
             vermelho();
 
         }
+
         public cor getSinal()
         {
             return sinal;
         }
+
+        public void contarCarros()
+        {
+            int x=0;
+            int cx, cy; // ponto x e y do carro
+            for(int i=0; i < carros.Count; i++)
+            {
+                cx = carros[i].getPointInicio().X;
+                cy = carros[i].getPointInicio().Y;
+                if ((cx > p1.X && cy > p1.Y) && cx < p2.X && cy < p2.Y)
+                    x++;
+            }
+
+            if (x > barra.Maximum)
+                x = barra.Maximum;
+            barra.Value = x;
+        }
+
         public void vermelho()
         {
             semafaro.Image = testes.Properties.Resources.sinal_vermelho;
             sinal = cor.Vermelho;
         }
+
         public void amerelo()
         {
             semafaro.Image = testes.Properties.Resources.sinal_amarelo;
             sinal = cor.Amarelo;
         }
+
         public void verde()
         {
             semafaro.Image = testes.Properties.Resources.sinal_verde;
@@ -54,6 +75,7 @@ namespace testes
         {
             return f1;
         }
+
         public System.Drawing.Point getFaixaP2()
         {
             return f2;
