@@ -35,7 +35,7 @@ namespace testes
             t.gerenciador.addSemafaro(semCima, barCima, new Point(300, 0), new Point(390, 160), new Point(300, 130), new Point(390, 160));
             t.gerenciador.addSemafaro(semDireita, barDireita, new Point(500, 160), new Point(810, 225), new Point(500, 160), new Point(530, 225));
             t.gerenciador.addSemafaro(semEsquerda, barEsquerda, new Point(0, 245), new Point(295, 313), new Point(260,250), new Point(296, 310));
-
+            
             t.gerenciador.iniciar();
             t.iniciar();
             

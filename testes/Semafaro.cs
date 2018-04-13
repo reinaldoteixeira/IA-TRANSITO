@@ -35,7 +35,10 @@ namespace testes
         {
             return sinal;
         }
-
+        public int quantidade()
+        {
+            return barra.Value;
+        }
         public void contarCarros()
         {
             int x=0;

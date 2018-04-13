@@ -90,6 +90,7 @@
             // 
             // barCima
             // 
+            this.barCima.BackColor = System.Drawing.SystemColors.Highlight;
             this.barCima.Location = new System.Drawing.Point(143, 127);
             this.barCima.Maximum = 8;
             this.barCima.Name = "barCima";
@@ -219,7 +220,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Yellow;
-            this.panel9.Location = new System.Drawing.Point(581, 233);
+            this.panel9.Location = new System.Drawing.Point(586, 233);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(34, 12);
             this.panel9.TabIndex = 9;
@@ -267,7 +268,7 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.Yellow;
-            this.panel14.Location = new System.Drawing.Point(397, 73);
+            this.panel14.Location = new System.Drawing.Point(397, 70);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(13, 33);
             this.panel14.TabIndex = 15;

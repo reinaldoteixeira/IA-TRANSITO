@@ -13,18 +13,110 @@ namespace testes
         public List<Semafaro> semafaros = new List<Semafaro>();
         private List<Carro> carros;
 
+        private int tLimite;
+
         public Gerenciador(List<Carro> carros)
         {
             this.carros = carros;
 
+            tLimite = 6;
             tempo = new Timer();
-            tempo.Interval = 5000;
+            tempo.Interval = 900;
             tempo.Tick += new EventHandler(Tick);
+
+            
         }
 
         private void Tick(object sender, EventArgs e)
         {
-            if(semafaros[0].getSinal()== cor.Verde)
+            //semafaroPadrao();
+            semafaroIA();
+            
+        }
+        private void semafaroIA()
+        {
+            // semafaros 
+            // 0 - baixo
+            // 1 - cima
+            // 2 - direita
+            // 3 - esquerda
+
+            if (semafaros[0].quantidade() >= semafaros[2].quantidade() &&
+                semafaros[0].quantidade() >= semafaros[3].quantidade() ||
+                semafaros[1].quantidade() >= semafaros[2].quantidade() &&
+                semafaros[1].quantidade() >= semafaros[3].quantidade())
+            {
+                if(((semafaros[0].getSinal() == cor.Vermelho && semafaros[1].getSinal() == cor.Vermelho) &&
+                    (semafaros[2].getSinal() == cor.Verde && semafaros[3].getSinal() == cor.Verde)) ||
+                    (semafaros[0].getSinal() == cor.Amarelo && semafaros[1].getSinal() == cor.Amarelo) &&
+                    (semafaros[2].getSinal() == cor.Vermelho && semafaros[3].getSinal() == cor.Vermelho))
+                {
+                    semafaros[0].vermelho();
+                    semafaros[1].vermelho();
+                    semafaros[2].amerelo();
+                    semafaros[3].amerelo();
+
+                    tLimite = 1;
+                }
+                else if((semafaros[0].getSinal() == cor.Vermelho && semafaros[1].getSinal() == cor.Vermelho) &&
+                        (semafaros[2].getSinal() == cor.Amarelo && semafaros[3].getSinal() == cor.Amarelo))
+                {
+                    if(tLimite == 0)
+                    {
+                        semafaros[0].verde();
+                        semafaros[1].verde();
+                        semafaros[2].vermelho();
+                        semafaros[3].vermelho();
+                        
+                        //tLimite = 15;
+                    }
+                    tLimite -= 1;
+                }
+                else
+                {
+                    //tLimite -= 1;
+                }
+            }
+            else
+            {
+                if (((semafaros[0].getSinal() == cor.Verde && semafaros[1].getSinal() == cor.Verde) &&
+                  (semafaros[2].getSinal() == cor.Vermelho && semafaros[3].getSinal() == cor.Vermelho)) ||
+                  ((semafaros[0].getSinal() == cor.Vermelho && semafaros[1].getSinal() == cor.Vermelho) &&
+                  (semafaros[2].getSinal() == cor.Amarelo && semafaros[3].getSinal() == cor.Amarelo)))
+                {
+                    semafaros[0].amerelo();
+                    semafaros[1].amerelo();
+                    semafaros[2].vermelho();
+                    semafaros[3].vermelho();
+
+                    tLimite = 1;
+                }
+                else if ((semafaros[0].getSinal() == cor.Amarelo && semafaros[1].getSinal() == cor.Amarelo) &&
+                        (semafaros[2].getSinal() == cor.Vermelho && semafaros[3].getSinal() == cor.Vermelho))
+                {
+                    if (tLimite == 0)
+                    {
+                        semafaros[0].vermelho();
+                        semafaros[1].vermelho();
+                        semafaros[2].verde();
+                        semafaros[3].verde();
+
+                        //tLimite = 15;
+                    }
+                    tLimite -= 1;
+                }
+                else
+                {
+                    //tLimite -= 1;
+                }
+            }
+
+           
+
+        }
+        private void semafaroPadrao()
+        {
+            if (semafaros[0].getSinal() == cor.Verde)
             {
                 semafaros[0].amerelo();
                 semafaros[1].amerelo();
@@ -52,7 +144,6 @@ namespace testes
                 semafaros[2].vermelho();
                 semafaros[3].vermelho();
             }
-            
         }
 
         public void iniciar()

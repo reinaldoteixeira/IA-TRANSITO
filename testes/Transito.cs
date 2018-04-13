@@ -16,6 +16,8 @@ namespace testes
         public List<Posicao> pontos = new List<Posicao>();
         public List<Carro> carros = new List<Carro>();
 
+        private Label lblCarros;
+
         int cont;
 
         public Transito(Form form)
@@ -24,11 +26,16 @@ namespace testes
             gerenciador = new Gerenciador(carros);
 
             tempo = new Timer();
-            tempo.Interval = 30;
+            tempo.Interval = 25;//30
             tempo.Tick += new EventHandler(Tick);
 
             cont = 40;
-         
+            lblCarros = new Label();
+            lblCarros.Text = "Carros : 0";
+            lblCarros.ForeColor = System.Drawing.Color.White;
+            lblCarros.Location = new System.Drawing.Point(25, 300);
+            form.Controls.Add(lblCarros);
+            lblCarros.Top = 2;
         }
 
         public void iniciar()
@@ -54,6 +61,8 @@ namespace testes
                 }
                 
                 addCarro();
+                lblCarros.Text = "Carros : " + carros.Count;
+
                 cont = 25;//25
                 for (int i = 0; i < carros.Count; i++)
                 {
