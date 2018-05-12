@@ -118,31 +118,56 @@ namespace testes
         {
             if (semafaros[0].getSinal() == cor.Verde)
             {
-                semafaros[0].amerelo();
-                semafaros[1].amerelo();
-                semafaros[2].vermelho();
-                semafaros[3].vermelho();
+                if (tLimite == 0)
+                {
+                    semafaros[0].amerelo();
+                    semafaros[1].amerelo();
+                    semafaros[2].vermelho();
+                    semafaros[3].vermelho();
+                    tLimite = 2;
+                }
+                else
+                    tLimite -= 1;
+                
             }
             else if (semafaros[0].getSinal() == cor.Amarelo)
             {
-                semafaros[0].vermelho();
-                semafaros[1].vermelho();
-                semafaros[2].verde();
-                semafaros[3].verde();
+                if (tLimite == 0)
+                {
+                    semafaros[0].vermelho();
+                    semafaros[1].vermelho();
+                    semafaros[2].verde();
+                    semafaros[3].verde();
+                    tLimite = 6;
+                }
+                else
+                    tLimite -= 1;
             }
             else if (semafaros[2].getSinal() == cor.Verde)
             {
-                semafaros[0].vermelho();
-                semafaros[1].vermelho();
-                semafaros[2].amerelo();
-                semafaros[3].amerelo();
+                if (tLimite == 0)
+                {
+                    semafaros[0].vermelho();
+                    semafaros[1].vermelho();
+                    semafaros[2].amerelo();
+                    semafaros[3].amerelo();
+                    tLimite = 2;
+                }
+                else
+                    tLimite -= 1;
             }
             else if (semafaros[2].getSinal() == cor.Amarelo)
             {
-                semafaros[0].verde();
-                semafaros[1].verde();
-                semafaros[2].vermelho();
-                semafaros[3].vermelho();
+                if (tLimite == 0)
+                {
+                    semafaros[0].verde();
+                    semafaros[1].verde();
+                    semafaros[2].vermelho();
+                    semafaros[3].vermelho();
+                    tLimite = 6;
+                }
+                else
+                    tLimite -= 1;
             }
         }
 

@@ -33,7 +33,7 @@ namespace testes
             lblCarros = new Label();
             lblCarros.Text = "Carros : 0";
             lblCarros.ForeColor = System.Drawing.Color.White;
-            lblCarros.Location = new System.Drawing.Point(25, 300);
+            lblCarros.Location = new System.Drawing.Point(412, 300);
             form.Controls.Add(lblCarros);
             lblCarros.Top = 2;
         }
